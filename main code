@@ -1,0 +1,25 @@
+st = input('enter the msg: ')
+words = st.split(' ')
+coding=False   # True for coding False for decoding
+if(coding):
+    nwords=[]
+    for word in words:
+        if(len(word)>=2):
+            r1='dsf'
+            r2='jkr'
+            stnew=r1+word[1:]+word[0]+r2
+            nwords.append(stnew)
+        else:
+            nwords.append(word[::-1])
+    print(' '.join(nwords))    
+else:
+    #pass  for coding = pass if decoding = this
+    nwords=[]
+    for word in words:
+        if(len(word)>=2):
+            stnew=word[3:-3]
+            stnew=stnew[-1]+stnew[:-1]
+            nwords.append(stnew)
+        else:
+            nwords.append(word[::-1])
+    print(' '.join(nwords))
